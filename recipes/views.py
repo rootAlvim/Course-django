@@ -1,0 +1,93 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+x = """
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre | Nuvens de Papel & Cafés Gelados</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f7f6;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h1 { color: #5d5dff; margin-bottom: 10px; }
+        .tagline { font-style: italic; color: #777; }
+        section {
+            margin-top: 30px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h2 { border-left: 5px solid #5d5dff; padding-left: 15px; color: #444; }
+        ul { list-style-type: "☁️ "; }
+        li { margin-bottom: 10px; }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #888;
+        }
+        .quote {
+            background: #eef2ff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nuvens de Papel & Cafés Gelados</h1>
+        <p class="tagline">O epicentro do despropósito criativo.</p>
+    </header>
+
+    <section>
+        <h2>O Que Somos?</h2>
+        <p>Somos uma iniciativa dedicada a catalogar o invisível e celebrar o que ninguém perguntou. Não somos uma empresa; somos aquele sentimento de encontrar uma nota de R$ 2,00 no bolso de uma calça esquecida.</p>
+    </section>
+
+    <section>
+        <h2>Nossas Atividades</h2>
+        <ul>
+            <li><strong>Curadoria de Sons:</strong> Especialistas em barulho de chuva em telhado de zinco.</li>
+            <li><strong>Logística Reversa:</strong> Onde param as tampas das canetas que somem? Nós investigamos.</li>
+            <li><strong>Consultoria de Nuvens:</strong> Identificação de animais em cúmulos-nimbos.</li>
+        </ul>
+    </section>
+
+    <section class="quote">
+        <p><em>"A aleatoriedade não é um erro, é o sistema operacional da criatividade."</em></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 - Criado por uma mente aleatória.</p>
+    </footer>
+
+</body>
+</html>
+
+"""
+def home(request):
+    return HttpResponse("Página Inicial")
+def contact(request):
+    return HttpResponse("Contato")
+def about(request): #Reecebemos a requisição do cliente
+    return HttpResponse(x) #Retornamos a resposta
+    
