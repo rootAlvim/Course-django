@@ -73,6 +73,8 @@
         body {
             font-size: 1.6rem;
             font-family: var(--font-primary);
+            background-color: var(--color-gray-1);
+
         }
 
         h1,
@@ -110,5 +112,46 @@
             margin-right: 2rem;
         }
 
+        .search-form {
+            border: 2px solid var(--color-primary-dark);
+            max-width: 64rem;
+            margin: 0 auto;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .search-input,
+        .search-button {
+            background: none;
+            border: none;
+            outline: none;
+            padding: 1rem;
+
+        }
+
+        .search-button { 
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .search-input {
+            width: 100%;
+            padding-right: 3rem;
+        }
+
+        .search-form:focus-within {
+            background-color: var(--color-white);
+        }
+
+        /*
+        .search-form:focus-within {
+            border-color: var(--color-primary);
+        }
+
+        .search-form:focus-within .search-button {
+            color: var(--color-primary);
+        }
+        */
     </style>
 </head>
