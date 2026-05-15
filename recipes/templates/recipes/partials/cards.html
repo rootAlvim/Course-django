@@ -1,40 +1,36 @@
 <div class=" libry libry-list-item">
     <div class="libry-cover">
-        <img src="https://media.licdn.com/dms/image/v2/C4D12AQElMcNEch38WQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1645152091261?e=2147483647&v=beta&t=rHdnB7tb0gw7fc-RNB1gFelNo8sdOXdg-bx0Cu0WHnk"
+        <img src= {{recipe.cover.url}}
             alt="">
     </div>
     <div class="libry-title-container">
-        <h2 class="libry-title">Lorem ipsum dolor sit amet.</h2>
+        <h2 class="libry-title">{{recipe.title}}</h2>
     </div>
 
     <div class="libry-author">
         <span class="libry-author-item">
             <i class="fas fa-user"></i>
-            Robert Cecil Martin
+            {{recipe.author.first_name}} {{recipe.author.last_name}}
         </span>
         <span class="libry-author-item">
             <i class="fas fa-calendar-alt"></i>
-            16/10/2021 às 11:21
+            {{ recipe.created_at|date:"d/m/Y" }}
         </span>
         <span class="libry-author-item">
             <a href="/recipes/category/romanse/">
                 <i class="fas fa-layer-group"></i>
-                <span>T.I</span>
+                <span>{{recipe.category.name}}</span>
             </a>
         </span>
     </div>
 
     <div class="libry-content">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, maxime numquam a, accusamus
-            ullam
-            ut eos, necessitatibus repellendus illum facere at dolore non consequuntur officiis magni
-            quam
-            delectus beatae impedit!</p>
+        <p>{{recipe.description}}</p>
     </div>
     <div class="libry-preco-container">
         <div class="libry-meta">
             <span class="libry-moeda">R$</span>
-            <span class="libry-valor">82,99</span>
+            <span class="libry-valor">{{recipe.price_decimal}}</span>
         </div>
 
     </div>
