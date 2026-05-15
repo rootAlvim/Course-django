@@ -1,12 +1,8 @@
-<!-- home.html -->
-{% include "recipes/partials/head.html" %}
-<body>
-    {% include "recipes/partials/header.html" %}
-    {% include "recipes/partials/search.html" %}
-    <main class="main-content main-content-lis container">
-        {% include "recipes/partials/cards.html" %}
-        {% include "recipes/partials/cards.html" %}
-        {% include "recipes/partials/cards.html" %}
-    </main>
-
-</body>
+{% extends 'global/base.html' %}
+{% block content %}
+        <div class="main-content main-content-lis container">
+            {% include "recipes/partials/cards.html" %}
+            {% include "recipes/partials/cards.html" %}
+            {% include "recipes/partials/cards.html" %}
+        </div>
+{% endblock content %}
