@@ -1,8 +1,12 @@
 {% extends 'global/base.html' %}
+{% block title %}Home | {% endblock title %}
 {% block content %}
-        <div class="main-content main-content-lis container">
-            {% include "recipes/partials/cards.html" %}
-            {% include "recipes/partials/cards.html" %}
-            {% include "recipes/partials/cards.html" %}
-        </div>
+    <div class="main-content main-content-lis container">
+        {% include "recipes/partials/cards.html" %}
+        {% include "recipes/partials/cards.html" %}
+        {% include "recipes/partials/cards.html" %}
+        {% include "recipes/partials/cards.html" %}
+        {% include "recipes/partials/cards.html" %}
+        {% include "recipes/partials/cards.html" %}
+    </div>
 {% endblock content %}
